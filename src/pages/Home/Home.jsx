@@ -63,7 +63,7 @@ export const Home = () => {
                             character => {
                                 return (
                                     <div key={character.id}>
-                                        {character.name}
+                                        {character.name}  
                                     </div>
                                 )
                             }
