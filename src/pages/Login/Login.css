@@ -9,6 +9,17 @@
     justify-content: center;
     align-items: center;
 
-    background-color: lightpink;
+    background-color: beige;
 
+}
+
+.inputDesign {
+
+    height: 2em;
+    width: 16em;
+
+    border-radius: 1em;
+    margin-bottom: 1em;
+
+    border: 0.2em solid darkblue;
 }
