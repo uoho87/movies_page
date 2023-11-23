@@ -63,6 +63,7 @@ export const Login = () => {
                     design={"inputDesign"}
                     //Pasamos la función al hijo desde aqui (el padre)
                     functionChange={InputHandler}
+                    functionCheck={()=>{}}
                 />
                 <CustomInput 
                     type={"password"}
@@ -70,6 +71,7 @@ export const Login = () => {
                     placeholder={""}
                     design={"inputDesign"}
                     functionChange={InputHandler}
+                    functionCheck={()=>{}}
                 />
                 <div>{mensajeError}</div>
                 <div className='buttonDesign' onClick={logMe}>Log me!</div></>)
