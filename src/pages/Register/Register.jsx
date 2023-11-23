@@ -54,7 +54,7 @@ export const Register = () => {
         type={"text"}
         name={"username"}
         placeholder={"nombre"}
-        design={"inputDesign"}
+        design={`inputDesign ${credentialsError.usernameError !== "" ? "inputError" : ""}`}
         //Pasamos la función al hijo desde aqui (el padre)
         functionChange={InputHandler}
         functionCheck={checkError}
@@ -64,16 +64,16 @@ export const Register = () => {
         type={"password"}
         name={"password"}
         placeholder={"password"}
-        design={"inputDesign"}
+        design={`inputDesign ${credentialsError.passwordError !== "" ? "inputError" : ""}`}
         functionChange={InputHandler}
         functionCheck={checkError}
       />
-      <div>{credentialsError.passwordError}</div>
+      <div className='msgError'>{credentialsError.passwordError}</div>
       <CustomInput
         type={"password"}
         name={"password2"}
         placeholder={"password otra vez"}
-        design={"inputDesign"}
+        design={`inputDesign ${credentialsError.password2Error !== "" ? "inputError" : ""}`}
         functionChange={InputHandler}
         functionCheck={checkError}
       />
@@ -82,7 +82,7 @@ export const Register = () => {
         type={"email"}
         name={"email"}
         placeholder={"correo"}
-        design={"inputDesign"}
+        design={`inputDesign ${credentialsError.emailError !== "" ? "inputError" : ""}`}
         functionChange={InputHandler}
         functionCheck={checkError}
       />
@@ -91,7 +91,7 @@ export const Register = () => {
         type={"text"}
         name={"age"}
         placeholder={"edad"}
-        design={"inputDesign"}
+        design={`inputDesign ${credentialsError.ageError !== "" ? "inputError" : ""}`}
         //Pasamos la función al hijo desde aqui (el padre)
         functionChange={InputHandler}
         functionCheck={checkError}
@@ -101,7 +101,7 @@ export const Register = () => {
         type={"text"}
         name={"phone"}
         placeholder={"telefono"}
-        design={"inputDesign"}
+        design={`inputDesign ${credentialsError.phoneError !== "" ? "inputError" : ""}`}
         functionChange={InputHandler}
         functionCheck={checkError}
       />
