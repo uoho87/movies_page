@@ -10,6 +10,7 @@ export const validate = (type, value) => {
         case 'mail':
         case 'imail':
         case 'imeil':
+        case 'email2':
             
             if (! /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test(value) ) {
                 return "Invalid e-mail format";
@@ -28,12 +29,12 @@ export const validate = (type, value) => {
                 return "Mínimo 8 caracteres"
             } else {
 
-                
+
                 return ""
             }
 
         default: 
-            console.log(type)
+            return ""
 
         
 
