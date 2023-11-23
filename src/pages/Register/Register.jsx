@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import { CustomInput } from "../../common/CustomInput/CustomInput";
 import "./Register.css";
@@ -5,7 +6,13 @@ import { validate } from "../../services/useful";
 import { bringAllCharacters } from "../../services/apiCalls";
 
 export const Register = () => {
+
+  //1 HOOKS DE ESTADO
+
+  const [interruptor, setInterruptor] = useState(false);
+
   const [personajes, setPersonajes] = useState([]);
+  
   const [credentials, setCredentials] = useState({
     username: "",
     password: "",
@@ -27,7 +34,9 @@ export const Register = () => {
     phoneError: "",
   });
 
-  const [interruptor, setInterruptor] = useState(false);
+  /////////////////////////////////////////////////////////
+
+  //4 HANDLERS
 
   const InputHandler = (e) => {
     //Este sistema lo vamos a utilizar cuando queramos bindear a un objeto con varias propiedades
@@ -36,6 +45,10 @@ export const Register = () => {
       [e.target.name]: e.target.value,
     }));
   };
+
+  ////////////////////////////////////////////////////////
+
+  //3 USEEFFECT
 
   useEffect(() => {
     console.log(credentials);
@@ -51,6 +64,10 @@ export const Register = () => {
     }
   }, [personajes]);
 
+  ///////////////////////////////////////////////////////
+
+  //5 FUNCIONES
+
   const checkError = (e) => {
     let error = "";
 
@@ -65,6 +82,10 @@ export const Register = () => {
       setInterruptor(true);
     }
   };
+
+  ///////////////////////////////////////////////////////
+
+  //2 RETURN O ZONA DE RENDER
 
   return (
     <div className="registerDesign">
@@ -149,4 +170,6 @@ export const Register = () => {
       )}
     </div>
   );
+
+  ///////////////////////////////////////////////////////
 };
